@@ -2,7 +2,7 @@ const express = require("express");
 const soap = require("soap");
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const wsdlUrl = "http://www.dneonline.com/calculator.asmx?WSDL";
 
 app.use(bodyParser.urlencoded({ extended: true }));
